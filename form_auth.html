@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/fontello.css">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <h1>FORMULARIO</h1>
+      
+    </header>
+    <nav>
+
+        <label for="menu"><span class="icon-menu"></span></label>
+        <input type="checkbox" id="menu">
+        <ul>
+            <li><a href="form_auth.html">Realizar Pago</a></li>
+            <li><a href="form_status.html">Estado</a></li>
+            <li><a href="form_ul.html">Límite superior</a></li>
+            <li><a href="form_fl.html">Límite inferior</a></li>
+   
+            
+        </ul>
+    </nav>
+   
+    <section>
+        <form method="GET" action="http://localhost:8080/GatewaySD/auth">
+
+            <br><br><br>
+            <h2>PAGO</h2>
+
+           <label>Titular<input required class="inp" type="text" name="Titular" ></label><br>
+           <label>Tarjeta<input required class="inp" title="Escriba 16 números" pattern="[0-9]{16,16}" type="text" name="Tarjeta" placeholder="XXXXXXXXXXXXXXXX" maxlength="16" minlength="16" ></label><br>
+           <label>Caducidad     <input required class="inp" pattern="[0-9]{2,2}" title="Escriba el mes con el formato de 2 números" placeholder="Mes" maxlength="2" minlength="2" type="text" name="Mes" > / 
+                                <input required class="inp" pattern="[0-9]{2,2}" title="Escriba el año con el formato de 2 números" placeholder="Año" maxlength="2" minlength="2" type="text" name="Anio" ></label><br>
+           <label>CVV <input required class="inp" type="text" pattern="[0-9]{3,3}" title="Escriba 3 números" name="CVV" placeholder="XXX"  maxlength="3" minlength="3"></label><br>
+           <label>Importe <input required class="inp" type="number" name="Importe" placeholder="En euros" ></label><br>
+           
+            <input style="padding: 1em; margin: 2em;" type="submit" value="Pagar">
+            <input style="padding: 1em; margin: 2em;" type="reset" value="Borrar">
+            <br><br>
+
+        </form>
+    </section>  
+    
+
+
+    <footer>
+ 
+        <p>&copy; SISTEMAS DISTRIBUIDOS <time datetime="2020">2020</time>   </p>
+
+  
+    </footer>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/fontello.css">
+
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <h1>PÁGINA DE INICIO</h1>
+      
+    </header>
+    <nav>
+
+        <label for="menu"><span class="icon-menu"></span></label>
+        <input type="checkbox" id="menu">
+        <ul>
+            <li><a href="form_auth.html">Realizar Pago</a></li>
+            <li><a href="form_status.html">Estado</a></li>
+            <li><a href="form_ul.html">Límite superior</a></li>
+            <li><a href="form_fl.html">Límite inferior</a></li>
+   
+            
+        </ul>
+    </nav>
+
+    <section>
+        <h2>LIMITE INFERIOR:</h2>
+        <form method="GET" action="http://localhost:8080/GatewaySD/fl">
+            <br><br><br>
+            <h3>CONSULTAR UN PROCESADOR</h3>
+              <label for="procesador">Procesador: </label>
+              <input required type="number" id="procesador" name="procesador" value=0 ><br>
+            <input style="padding: 1em; margin: 2em;" type="submit" value="Aceptar">
+            <br><br>
+        </form>
+
+        <form method="GET" action="http://localhost:8080/GatewaySD/fl">
+            <br><br><br>
+            <h3>CAMBIAR UN PROCESADOR</h3>
+              <label for="procesador">Procesador: </label>
+              <input required type="number" id="procesador" name="procesador" value=0 ><br><br>
+
+              <h3>Valor del Set</h3>
+              <input required type="text" name="set" value=0 maxlength="9" pattern="[0-9]{1,9}" title="Escribe un numero">
+              <br>
+            <input style="padding: 1em; margin: 2em;" type="submit" value="Aceptar">
+            <br><br>
+        </form>
+    </section>  
+
+  
+    <footer>
+ 
+        <p>&copy; SISTEMAS DISTRIBUIDOS <time datetime="2020">2020</time>   </p>
+
+  
+    </footer>
+</body>
+</html>
